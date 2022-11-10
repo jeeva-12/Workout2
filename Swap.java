@@ -1,49 +1,35 @@
-import java.awt.*;
+class   Variables
+{
+    int a=30;
+    int b=20;
+}
+    public class Swap
+    {
 
 
 
-    class SwapByValue {
+         static void swap(int a,int b)
+         {
+             System.out.println("Value before Swaping:a= "+a+"b="+b);
 
-
-
-        public static void main(String[] args) {
-
-           int num1 = 5;
-
-           int num2 = 10;
-           int temp;
-
-            temp=num1;
-            num1=num2;
-            num2=temp;
-
-            System.out.println("***After swapping***");
-
-            System.out.println("Value of num1 is :" + num1);
-
-            System.out.println("Value of num2 is :" + num2);
+           int t=a;
+           a=b;
+           b=t;
+           System.out.println("After swaping:a="+a+"b="+b);
 
         }
-
-    }
-
-
-    class SwapByReference {
-
         public static void main(String[] args)
         {
-            Point p1=new Point();
-            p1.x=1;
-            p1.y=2;
-            System.out.println("x="+p1.x+"y= "+p1.y);
-            change(p1);
-            System.out.println("x="+p1.x+"y= "+p1.y);
+            System.out.println("Call by Value\n*************************");
+            int a=50;
+            int b=80;
+            swap(a,b);
 
+            System.out.println("******************************\n Call by Reference");
+            Variables o1=new Variables();
+            swap(o1.a,o1.b);
         }
-        public static void change(Point p)
-        {
-            p.x=2;
-            p.y=1;
-        }
+
     }
+
 
