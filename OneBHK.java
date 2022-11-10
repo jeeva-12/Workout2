@@ -46,5 +46,6 @@ class BkH {
         O1.show();
         O2.show();
         O3.show();
+        System.out.println("Total price of flat=" O1.price+O2.price+O3.price);
     }
 }
